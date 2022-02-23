@@ -1,0 +1,64 @@
+﻿@page "/"
+@using YeelightAPI
+
+@code {
+    Device YeeLight = new Device("192.168.18.20");
+    protected override async Task OnInitializedAsync() => await YeeLight.Connect();
+
+    private async Task SwitchOn() => await YeeLight.TurnOn();
+    private async Task SwitchOff() => await YeeLight.TurnOff();
+
+    private async Task SwitchToColour(int r, int g, int b)
+    {
+        await YeeLight.SetRGBColor(r, g, b);
+    }
+}
+<div class="text-center">
+    <img width="300" src="./bot.png" />
+</div>
+
+@if (!YeeLight.IsConnected)
+{
+    <h5>connecting to the device...</h5>
+}
+else
+{
+    <h3>Power Switch</h3>
+    <div class="row">
+        <input class="col bg-info" type="button" value="On" @onclick=SwitchOn />
+        <input class="col bg-gray" type="button" value="Off" @onclick=SwitchOff />
+    </div>
+
+    <h3>Colours</h3>
+    <div class="row">
+        <input class="col bg-primary" type="button" @onclick="async () => await SwitchToColour(0,0,255)" />
+        <input class="col bg-warning" type="button" @onclick="async () => await SwitchToColour(255,255,0)" />
+        <input class="col bg-danger" type="button" @onclick="async () => await SwitchToColour(255,0,0)" />
+        <input class="col bg-success" type="button" @onclick="async () => await SwitchToColour(0,255,0)" />
+    </div>
+
+    <div class="text-center m-4">
+        <img class="mb-3" width="200" src="./yeelight-logo.png" />
+        <h5>
+            <span class="badge bg-info">CONNECTED</span>
+        </h5>
+    </div>
+
+}
+
+<style>
+    h3 {
+        font-weight: 600;
+        color: white;
+        margin: 15px 0px;
+    }
+
+    .col {
+        width: 50px;
+        padding: 10px;
+        margin: 10px;
+        font-size: x-large;
+        border: 0px;
+        border-radius: 5px;
+    }
+</style>

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome", "SmartHome\SmartHome.csproj", "{DB851453-6D0F-4CFB-9DD6-79B9DF5314AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome", "SmartHome\SmartHome.csproj", "{DB851453-6D0F-4CFB-9DD6-79B9DF5314AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.BlazorServerApp", "SmartHome.BlazorServerApp\SmartHome.BlazorServerApp.csproj", "{DEF23C84-AED5-43A6-88D1-2818A68097BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.BlazorHybridApp", "SmartHome.BlazorHybridApp\SmartHome.BlazorHybridApp.csproj", "{ABA8BCC6-D4D7-42DD-8BD3-A0585AE720ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,16 @@ Global
 		{DB851453-6D0F-4CFB-9DD6-79B9DF5314AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB851453-6D0F-4CFB-9DD6-79B9DF5314AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB851453-6D0F-4CFB-9DD6-79B9DF5314AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF23C84-AED5-43A6-88D1-2818A68097BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF23C84-AED5-43A6-88D1-2818A68097BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF23C84-AED5-43A6-88D1-2818A68097BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF23C84-AED5-43A6-88D1-2818A68097BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA8BCC6-D4D7-42DD-8BD3-A0585AE720ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA8BCC6-D4D7-42DD-8BD3-A0585AE720ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA8BCC6-D4D7-42DD-8BD3-A0585AE720ED}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ABA8BCC6-D4D7-42DD-8BD3-A0585AE720ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA8BCC6-D4D7-42DD-8BD3-A0585AE720ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA8BCC6-D4D7-42DD-8BD3-A0585AE720ED}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
